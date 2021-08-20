@@ -5,18 +5,15 @@ class System{
     }
 
     // Add code to authenticate the given code and the access codes.
-    display(){
     authenticate(actualCode,enteredCode)
     {
+        console.log("ActCode "+actualCode+"EntCode "+enteredCode)
         if(actualCode===enteredCode)
             return true
         
         else
             return false
 
-    }
-        
-    }
-
+    }  
 }  
 

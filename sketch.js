@@ -3,6 +3,7 @@ var score=0;
 
 function preload() {
   bg = loadImage("aladdin_cave.jpg");
+  bg2= loadImage("treasure.jpg")
 }
 
 function setup() {
@@ -14,23 +15,23 @@ function setup() {
 function draw() {
   background(bg);
   clues();
-  security.display();
-  system.display()
+  //authenticate();
+  //system.display()
+  security.check1()
+  security.check2()
+  security.check3()
 
   // Add code to display score in the middle of the screen
-  text("Score:"+score,200,150)
+  text("Score:"+score,700,50)
   if(score===3)
     {
-      clear()
+    clear()
       background(bg2)
-      fill("black")
+      fill("blue")
       textSize(40)
-      text("GAME OVER TREASURE FOUND",250,200)
+      text("GAME OVER TREASURE FOUND",200,450)
     }
 
-
-  // Add code to display the end screen
-
-
+  // Add code to display the end screen 
   drawSprites()
 }
